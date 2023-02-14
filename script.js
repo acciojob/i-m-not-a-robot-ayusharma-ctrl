@@ -1,7 +1,7 @@
 //your JS code here. If required.
 //your code here
 var lastImage = document.getElementsByTagName("img")[5]
-var reset = document.getElementById('reset')
+var btn = document.getElementById('btn')
 var verify = document.getElementById('verify')
 var para = document.getElementById('para')
 
@@ -16,7 +16,7 @@ function selectImage(i){
     var tile = document.getElementsByTagName("img")[i]
     tile.classList.add("selected")
     countImage++
-    reset.style.display = 'inline-block'
+    btn.style.display = 'inline-block'
     // console.log(countImage)
     if(countImage==2){
         verify.style.display = 'inline-block'
@@ -26,7 +26,7 @@ function selectImage(i){
     }
 }
 
-reset.onclick = function(){
+btn.onclick = function(){
     var tile0 = document.getElementsByTagName('img')[0]
     tile0.classList.remove('selected')
     var tile1 = document.getElementsByTagName('img')[1]
@@ -40,7 +40,7 @@ reset.onclick = function(){
     var tile5 = document.getElementsByTagName('img')[5]
     tile5.classList.remove('selected')
     countImage=0
-    reset.style.display = 'none'
+    btn.style.display = 'none'
     para.innerText = ""
     verify.style.display = 'none'
 }
